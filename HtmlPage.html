@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+   
+     
+    
+</head>
+<body>
+    要蓋幾層:
+    <br />
+    <input type="text" id="txt1" PlaceHolder="層數" size="40" >
+    
+    <br><br>
+    <input type="button" id="Button1" name="Button1"
+           value="開始執行" onclick="Button1_onclick()">
+    <br>
+       <div id="debug"></div>
+
+    <script>
+      
+        function Button1_onclick() {
+            var x = txt1.value;
+            var star = "";
+            for (layer = 1; layer <= x; layer++) {
+                for (column = 1; column <=layer; column++) {
+                    star = star + "*";
+                }
+                star += "<br>";
+            }
+            debug.innerHTML = star;
+
+            //var ttt = txt1.value;
+            //var star = "";
+            //for(var i = 1 ; i <= ttt ; i++)
+            //{
+            //document.write(" ");
+            //for(var j = 1; j <=i ; j++)
+            //document.write("*");
+            //document.write("<br>");
+            //}
+
+
+            //for (i = 1; i <= txt1 ; i++) {
+             
+           //    star = star + "*";
+           //    document.write(star + "<br>");
+           //}
+
+      
+
+            }
+    </script>
+
+</body>
+</html>
